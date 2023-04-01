@@ -10,6 +10,10 @@ const studentSchema = mongoose.Schema({
         type:String,
         required :[true,"Please Enter Email"]
     },
+    session:{
+        type:String,
+        required:[true]
+    },
     dob:{
         type:String,
         default:""
@@ -28,7 +32,7 @@ const studentSchema = mongoose.Schema({
     },
     branch:{
         type:String,
-        default:""
+        required:[true]
     },
     department:{
         type:String,
