@@ -34,6 +34,10 @@ const studentSchema = mongoose.Schema({
         type:String,
         required:[true]
     },
+    address:{
+        type:String,
+        default:""
+    },
     department:{
         type:String,
         default:""
