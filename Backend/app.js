@@ -28,4 +28,8 @@ app.use("/api/v1", assignment);
 const department = require("./routes/departmentRoute");
 app.use("/api/v1", department);
 
+//Route import TimeTable
+const timeTable = require("./routes/timeTableRoute");
+app.use("/api/v1", timeTable);
+
 module.exports = app;
