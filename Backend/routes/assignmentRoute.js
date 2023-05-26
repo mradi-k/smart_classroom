@@ -3,7 +3,7 @@ const {
   addAssignment,
   showAssignment,
 } = require("../controllers/assignmentController");
-const singleUpload = require("../middleware/multer");
+// const singleUpload = require("../middleware/multer");
 const router = express.Router();
 
 router.route("/assignment").post(addAssignment);

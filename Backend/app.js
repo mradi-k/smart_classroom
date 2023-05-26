@@ -32,4 +32,8 @@ app.use("/api/v1", department);
 const timeTable = require("./routes/timeTableRoute");
 app.use("/api/v1", timeTable);
 
+//Route import class
+const classR = require("./routes/classRoute");
+app.use("/api/v1", classR);
+
 module.exports = app;

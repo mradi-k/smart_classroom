@@ -1,35 +1,34 @@
 const mongoose = require("mongoose");
 
 const timeTableSchema = mongoose.Schema({
-  department: {
+  branch: {
     type: String,
-    required: [true, "Please Enter Department"],
-    trim: true,
-    unique: true,
+    required: [true, "Please Enter Branch"],
   },
-  slot: [
+  semester: {
+    type: String,
+    required: [true, "Please Enter Semester"],
+  },
+  day: {
+    type: String,
+    required: [true, "Please Enter Day "],
+  },
+  Subjects: [
     {
       type: Object,
-      required: [true, "Please Enter Slot"],
-      semester: {
+      required: [true, "Please Enter Subjects "],
+      subName: {
         type: String,
-        required: [true, "Please Enter Semester"],
+        required: [true, "Please Enter Subject Name "],
       },
-      subject: {
+      Time: {
         type: String,
-        required: [true, "Please Enter Subject"],
+        required: [true, "Please Enter Time "],
+        unique: [true, "Time Should be Unique"],
       },
-      day: {
+      FacultyName: {
         type: String,
-        required: [true, "Please Enter Day"],
-      },
-      time: {
-        type: String,
-        required: [true, "Please Enter Time"],
-      },
-      faculty: {
-        type: String,
-        required: [true, "Please Enter Faculty"],
+        required: [true, "Please Enter Faculty Name "],
       },
     },
   ],
